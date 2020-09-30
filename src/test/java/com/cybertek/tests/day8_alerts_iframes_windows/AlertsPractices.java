@@ -36,7 +36,7 @@ public class AlertsPractices {
         //1- Create Alert instance and switch to alert
         Alert alert = driver.switchTo().alert();
 
-        BrowserUtils.waitTime(2);
+        BrowserUtils.wait(2);
 
         //2- Use "alert" instance to accept the javascript alert(popup)
         alert.accept();

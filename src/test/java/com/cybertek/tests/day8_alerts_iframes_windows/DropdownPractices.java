@@ -65,7 +65,7 @@ public class DropdownPractices {
 //        for (WebElement each : actualMonthOptions) {
 //            actualMonthsTexts.add(each.getText());
 //        }
-        BrowserUtils.waitTime(2);
+        BrowserUtils.wait(2);
 
 
 

@@ -48,14 +48,14 @@ public class Alert3Practice {
         Alert alert = driver.switchTo().alert();
 
         //BrowserUtils class we created to store commonly used utility methods
-        BrowserUtils.waitTime(2);
+        BrowserUtils.wait(2);
 
         //Sending keys to the "prompt" alert
         String input = "something is happening";
 
         alert.sendKeys(input);
 
-        BrowserUtils.waitTime(2);
+        BrowserUtils.wait(2);
         //Accepting the alert
         alert.accept();
 
