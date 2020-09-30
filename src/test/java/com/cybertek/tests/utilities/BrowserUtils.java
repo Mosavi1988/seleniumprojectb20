@@ -30,7 +30,7 @@ public class BrowserUtils {
         return webElementsAsString;
     }
 
-    public static void waitTime(int sec) {
+    public static void wait(int sec) {
         try {
             Thread.sleep(1000 * sec);
         } catch (Exception e) {
