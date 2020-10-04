@@ -1,34 +1,22 @@
 package com.cybertek.tests.day10_testbase_properties_driverUtil;
 
+import com.cybertek.tests.base.TestBase;
 import com.cybertek.tests.utilities.BrowserUtils;
 import com.cybertek.tests.utilities.SmartBearUtilities;
-import com.cybertek.tests.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class SmartBearPractices_9_10_11 {
-
-    WebDriver driver;
-
-    @BeforeMethod
-    public void setupMethod(){
-
-        driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
-        SmartBearUtilities.loginToSmartBear(driver);
-    }
+public class SmartBearPractices_9_10_11 extends TestBase {
 
     @Test
     public void p9_delete_order_task(){
+        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
+        SmartBearUtilities.loginToSmartBear(driver);
+
         // Locate the checkbox for 'Mark Smith' and click to it
         WebElement markSmithCheckbox = driver.findElement(By.xpath("//td[.='Mark Smith']/../td[1]"));
         BrowserUtils.wait(2);
