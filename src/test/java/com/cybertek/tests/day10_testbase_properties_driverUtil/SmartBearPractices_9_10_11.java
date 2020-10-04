@@ -43,6 +43,7 @@ public class SmartBearPractices_9_10_11 {
 
         for (WebElement each : namesList) {
             Assert.assertFalse(each.getText().equals("Mark Smith"));
+
         }
     }
 
