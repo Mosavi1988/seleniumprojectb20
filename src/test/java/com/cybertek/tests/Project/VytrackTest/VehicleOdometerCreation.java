@@ -79,7 +79,7 @@ public class VehicleOdometerCreation {
 
         Assert.assertEquals(expectedResult,actualresult);
 
-        driver.quit();
+        driver.close();
 
     }
 

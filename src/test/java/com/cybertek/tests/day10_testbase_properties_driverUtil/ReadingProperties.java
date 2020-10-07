@@ -1,5 +1,6 @@
 package com.cybertek.tests.day10_testbase_properties_driverUtil;
 
+import com.cybertek.tests.utilities.ConfigurationReader;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
@@ -29,7 +30,11 @@ public class ReadingProperties {
         System.out.println("properties.getProperty(\"username\") = " + properties.getProperty("username"));
         // Close the file
 
+    }
 
-
+    @Test
+    public void ussing_properties_utility_method(){
+        System.out.println("ConfigurationReader.getProperty(\"browser\") = " + ConfigurationReader.getProperty("browser"));
+        System.out.println("ConfigurationReader.getProperty(\"smartbearUrl\") = " + ConfigurationReader.getProperty("smartbearUrl"));
     }
 }
