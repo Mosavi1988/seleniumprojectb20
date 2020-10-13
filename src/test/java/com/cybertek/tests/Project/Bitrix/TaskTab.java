@@ -23,7 +23,7 @@ public class TaskTab {
     }
 
 
-    @Test(priority = 1)
+    @Test
 /*
 AC#1
 Given as a user, I am at the active stream
@@ -61,7 +61,37 @@ Then I should be able to prioritize task
         WebElement deleteButton = Driver.getDriver().findElement(By.xpath("//span[@class='js-id-checklist-is-i-delete task-field-title-del tasks-btn-delete']"));
         deleteButton.click();
 
-// Third Test Case
+/*Third Test Case
+AC#3
+Given as a user, I am at the active stream
+When user click on Task tab
+And I click on "Add More"
+Then select contacts from E-mail, Employees and Departments, and Recent contact lists
+And I can assign Employees to different categories: Created By, Participants, and Observer
+ */
+        BrowserUtils.wait(1);
+        WebElement addMoreButton = Driver.getDriver().findElement(By.xpath("//*[@id=\"bx-component-scope-lifefeed_task_form-responsible\"]/span[2]/a[1]"));
+        addMoreButton.click();
+
+        BrowserUtils.wait(1);
+        WebElement selectContacts = Driver.getDriver().findElement(By.xpath("/html/body/div[8]/div[1]/div/div[1]/a[2]"));
+        selectContacts.click();
+
+        BrowserUtils.wait(1);
+        WebElement assignEmployee = Driver.getDriver().findElement(By.xpath("//*[@id=\"bx-lm-category-relation-129\"]/a[5]/div[1]/div[1]"));
+        assignEmployee.click();
+
+        /*
+        AC#4
+Given as a user, I am at the active stream
+When user click on Task tab
+And the user selects a date from date picker
+Then user can add Deadline, and Time Planning By
+         */
+        BrowserUtils.wait(1);
+        WebElement deadLine = Driver.getDriver().findElement(By.xpath("//*[@id=\"bx-component-scope-lifefeed_task_form\"]/div/div[3]/div[2]/div/div[1]/span[1]/span/input[1]"));
+        deadLine.click();
+
 
     }
 
